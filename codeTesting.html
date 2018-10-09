@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<link rel="stylesheet" href="codeTesting.css">
+	<script src="codeTesting.js"></script>
+</head>
+
+<body>
+	<div class="eventDisplayBox">
+		<div id="textDisplay">
+			<div id="textDisplayText">Example text to give notifactions about events</div>
+		</div>
+	</div>
+	<div class="mainTab" id="buildTab">
+		<div class="mainpageWrapper">
+			<div class="buttons">
+				<div id="actionButtons">
+					<p>Act</p>
+					<button class="searchButton" id="searchAreaButton" onclick="searchAreaStart()">Explore surroundings<span class="tooltip">tooltip</span></button>
+					<button class="searchButton" id="searchFoodButton" onclick="searchFood()">Look for food<span class="tooltip">tooltip</span></button>
+					<button class="searchButton" id="searchWoodButton" onclick="searchWood()">Gather wood<span class="tooltip">tooltip</span></button>
+					<button class="searchButton" id="searchStoneButton" onclick="searchStone()">Gather stones<span class="tooltip">tooltip</span></button>
+					<button class="searchButton" id="searchScienceButton" onclick="searchInfo()">Gather information<span class="tooltip">tooltip</span></button>
+				</div>
+				<div id="buildButtons">
+					<p>Build</p>
+					<button class="buildButton" id="buildHutButton" onclick="addHut()">Hut<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildWellButton" onclick="addWell">Well<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildFarmButton" onclick="addFarm()">Farm<span class="tooltip">+1 food/sec</br>-100 food</span></button>
+					<button class="buildButton" id="buildLibraryButton" onclick="addLibrary()">Library<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildArcheryButton" onclick="addArchery()">Archery Range<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildTanneryButton" onclick="addTannery()">Tannery<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildWorkshopButton" onclick="addWorkshop()">Workshop<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildBlacksmithButton" onclick="addBlacksmith()">Blacksmith<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildMillButton" onclick="addMill()">Mill<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildMillButton" onclick="addMill()">Mill<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildMillButton" onclick="addMill()">Mill<span class="tooltip">tooltip</span></button>
+					<button class="buildButton" id="buildMillButton" onclick="addMill()">Mill<span class="tooltip">tooltip</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainTab" id="townTab">
+		<div class="mainpageWrapper">
+			<div id="townWrapper">
+				<div id="popJoy">
+					<div id="joyHeading">Population Happiness</div>
+					<div id="joyHappiness">Currently at: <span id="joyHappinessStat">80%</span> happiness</div>
+					<div id="joyContributors">
+						<div id="joyConWater">
+							<div>Water: <span>+0%</span></div> 
+							<div id="joyConWaterMsg">Your citizens have clean water</div>
+						</div>
+						<div id="joyConSafe">
+							<div>Safety: <span>+0%</span></div>
+							<div id="joyConSafeMsg">of your citizens feel safe</div>
+						</div>
+						<div id="joyConArt">
+							<div>Arts: <span>+0%</span></div>
+							<div id="joyConArtMsg">of your citizens feel artistically satiated</div>
+						</div>
+						<div id="joyConFun">
+							<div>Entertainment: <span>+0%</span></div>
+							<div id="joyConFunMsg">of your citizens feel entertained</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="popJob">
+					<div>Farmer</div>
+					<div>Lumberjack</div>
+					<div>Miner</div>
+					<div>Scholar</div>
+					<div>Tanner</div>
+					<div>Explorer</div>
+					<div>Unemployed</div>
+					<div>Militarized</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainTab" id="workshopTab">
+		<div class="mainpageWrapper">
+			<div class="buttons">
+				<button class="techButton" id="techLiteracyButton" onclick="upgradeLiteracy()">Literacy<span class="tooltip">tooltip</span></button>
+				<button class="techButton" id="techThatchButton" onclick="upgradeThatch()">Thatch<span class="tooltip">tooltip</span></button>
+				<button class="techButton" id="techClayButton" onclick="upgradeClay()">Clay<span class="tooltip">tooltip</span></button>
+				<button class="techButton" id="techStoneWallButton" onclick="upgradeStoneWall()">Stone Walls<span class="tooltip">tooltip</span></button>
+				<button class="techButton" id="techIronFarmButton" onclick="upgradeIronFarm()">Iron Farming Equipment<span class="tooltip">tooltip</span></button>
+			</div>
+		</div>
+	</div>
+	<div class="mainTab" id="diplomacyTab">
+		<div class="mainpageWrapper">
+			<div class="trade">
+			
+			</div>
+		</div>
+	</div>
+	<div class="mainTab" id="militaryTab">
+		<div class="mainpageWrapper">
+			<div class="buttons">
+				<button class="militaryButton" id="militarySpearmanButton" onclick="addSpearman()">Spearman<span class="tooltip">tooltip</span></button>
+				<button class="militaryButton" id="militaryHorsemanButton" onclick="addHorseman()">Horseman<span class="tooltip">tooltip</span></button>
+				<button class="militaryButton" id="militarySwordsmanButton" onclick="addSwordsman()">Swordsman<span class="tooltip">tooltip</span></button>
+				<button class="militaryButton" id="militaryBerserkerButton" onclick="addBerserker()">Berserker<span class="tooltip">tooltip</span></button>
+				<button class="militaryButton" id="militaryArcherButton" onclick="addSpearman()">Archer<span class="tooltip">tooltip</span></button>	
+			</div>
+		</div>
+	</div>
+	<div class="mainTab" id="eventTab">
+	</div>
+	<div id="topnav">
+		<div class="navTab">
+			<a class="navTabLinks active" id="buildPage" onclick="openTab(event, 'buildTab')">Build</a>
+			<a class="navTabLinks" id="townPage" onclick="openTab(event, 'townTab')">Town</a>
+			<a class="navTabLinks" id="workshopPage" onclick="openTab(event, 'workshopTab')">Workshop</a>
+			<a class="navTabLinks" id="diplomacyPage" onclick="openTab(event, 'diplomacyTab')">Diplomacy</a>
+			<a class="navTabLinks" id="militaryPage" onclick="openTab(event, 'militaryTab')">Military</a>
+			<a class="navTabLinks" id="eventPage" onclick="openTab(event, 'eventTab')">Event log</a>
+		</div>
+	</div>
+	<div id="sidebar">
+		<canvas id="townSizeCanvas" width="160" height="160"></canvas>
+		<div id="stats">
+			<div class="statBox" id="food">
+				<div class="statTitle" id="">Food</div>
+				<div id="foodStat">0.00/5000</div>
+				<div id="foodPerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="water">
+				<div class="statTitle" id="">Water</div>
+				<div id="waterStat">0.00/5000</div>
+				<div id="waterPerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="wood">
+				<div class="statTitle" id="">Wood</div>
+				<div id="woodStat">0.00/5000</div>
+				<div id="woodPerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="stone">
+				<div class="statTitle" id="">Stone</div>
+				<div id="stoneStat">0.00/5000</div>
+				<div id="stonePerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="leather">
+				<div class="statTitle" id="">Leather</div>
+				<div id="leatherStat">0.00/5000</div>
+				<div id="leatherPerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="iron">
+				<div class="statTitle" id="">Iron</div>
+				<div id="ironStat">0.00/5000</div>
+				<div id="ironPerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="gold">
+				<div class="statTitle" id="">Gold</div>
+				<div id="goldStat">0.00/5000</div>
+				<div id="goldPerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			<div class="statBox" id="science">
+				<div class="statTitle" id="">Science</div>
+				<div id="scienceStat">0.00/5000</div>
+				<div id="sciencePerSecond">+0.00/sec</div>
+				<div id="">+[0%]</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	<div id="bottomBar">
+		<div id="bottomStatBar">
+				<a id="statPopulation">Population: 0/50</a>
+				<a id="statHorses">Horses: 0</a>
+				<a id="statHuts">Huts: 0</a>
+				<a id="statFarms">Farms: 0</a>
+				<a id="statLibraries">Libraries: 0</a>
+				<a id="statWater">Water: 0</a>
+				<a id=""></a>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+
