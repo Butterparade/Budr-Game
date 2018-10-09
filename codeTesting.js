@@ -203,11 +203,13 @@ function searchAreaStart() {
 		document.getElementById("techClayButton").style.display = "block";
 		document.getElementById("techStoneWallButton").style.display = "block";
 		document.getElementById("techIronFarmButton").style.display = "block";
-		document.getElementById("militarySpearmanButton").style.display = "block";
-		document.getElementById("militaryHorsemanButton").style.display = "block";
+		document.getElementById("militarySpearfolkButton").style.display = "block";
+		document.getElementById("militaryMountedMeleeButton").style.display = "block";
 		document.getElementById("militarySwordsmanButton").style.display = "block";
 		document.getElementById("militaryBerserkerButton").style.display = "block";
 		document.getElementById("militaryArcherButton").style.display = "block";
+		document.getElementById("militaryClubberButton").style.display = "block";
+		document.getElementById("militaryMountedArcherButton").style.display = "block";
 	};
 	setInterval(basicIncrement, 100);
 	basicIncrement();
